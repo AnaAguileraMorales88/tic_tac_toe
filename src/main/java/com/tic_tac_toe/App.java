@@ -8,28 +8,29 @@ public class App {
         Board board = new Board();
         char currentPlayer = 'X';
 
-        System.out.println("Bienvenid@ a nuestro juego!");
+        System.out.println("\n\nBienvenid@ a nuestro juego!");
+        System.out.println();
   
         board.printBoard();
 
         while (true) {
-            System.out.println("Turno de jugad@r: " + currentPlayer);
+            System.out.println("\n\nTurno de jugad@r: " + currentPlayer);
             System.out.println();
 
             int row, column; 
             while (true) {
-                System.out.print("Ingresa fila (0 al 2): ");
+                System.out.print("\nIngresa fila (0 al 2): ");
                 row = sc.nextInt();
-                System.out.print("Ingresa columna (0 al 2): ");
+                System.out.print("\nIngresa columna (0 al 2): ");
                 column = sc.nextInt();
 
                 if (row < 0 || row > 2 || column < 0 || column > 2) {
-                    System.out.println("Tienes que ingresar números del 0 al 2, vuelve a intentarlo");
+                    System.out.println("\nTienes que ingresar números del 0 al 2, vuelve a intentarlo");
                     continue;
                 }
                 Coordinate move = new Coordinate(row, column);
                 if (!board.makeMove(move, currentPlayer)) {
-                    System.out.println("Esa casilla ya está ocupada, vuelve a intentarlo");
+                    System.out.println("\nEsa casilla ya está ocupada, vuelve a intentarlo");
                     continue; 
                     
                 }
@@ -39,12 +40,13 @@ public class App {
             board.printBoard();
 
             if(board.checkWinner(currentPlayer)){
+                System.out.println();
                 System.out.println(currentPlayer + " ha ganado!!");
                 break;
             }
 
             if(board.isFull()){
-                System.out.println("Empate. No hay más movimientos posibles.");
+                System.out.println("\n\nEmpate. No hay más movimientos posibles.");
                 break;
             }
 
