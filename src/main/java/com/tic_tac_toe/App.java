@@ -14,15 +14,27 @@ public class App {
 
         while (true) {
             System.out.println("Turno de jugad@r: " + currentPlayer);
-            System.out.print("Ingresa fila (0-2): ");
-            int row = sc.nextInt();
-            System.out.print("Ingresa columna (0-2): ");
-            int column = sc.nextInt();
+            System.out.println();
 
-            Coordinate move = new Coordinate(row, column);
-            if(!board.makeMove(move, currentPlayer)){
-                System.out.println("Esa casilla ya está ocupada, intentálo de nuevo");
-                continue;
+            int row, column; 
+            while (true) {
+                System.out.print("Ingresa fila (0 al 2): ");
+                row = sc.nextInt();
+                System.out.print("Ingresa columna (0 al 2): ");
+                column = sc.nextInt();
+
+                if (row < 0 || row > 2 || column < 0 || column > 2) {
+                    System.out.println("Tienes que ingresar números del 0 al 2, vuelve a intentarlo");
+                    continue;
+                }
+                Coordinate move = new Coordinate(row, column);
+                if (!board.makeMove(move, currentPlayer)) {
+                    System.out.println("Esa casilla ya está ocupada, vuelve a intentarlo");
+                    continue; 
+                    
+                }
+
+                break; 
             }
             board.printBoard();
 
