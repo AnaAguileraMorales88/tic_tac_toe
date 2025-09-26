@@ -9,7 +9,7 @@ public class App {
         Board board = new Board();
         char currentPlayer = 'X';
 
-        System.out.println("\n\n" + Style.colorBlueBold("Bienvenid@ a nuestro juego!"));
+        System.out.println("\n\n" + Style.titleStyle("    Bienvenid@ a nuestro juego!    "));
         System.out.println();
 
         board.printBoard();
@@ -51,7 +51,7 @@ public class App {
 
             if(board.checkWinner(currentPlayer)){
                 System.out.println();
-                System.out.println(Style.colorBlueBold(currentPlayer +  " ha ganado!!"));
+                System.out.println(Style.colorBlueBold(currentPlayer +  " ha ganado!!\n"));
                 break;
             }
 

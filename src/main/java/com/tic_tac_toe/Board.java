@@ -20,8 +20,8 @@ public class Board {
             System.out.print(i + " | ");
             for (int j = 0; j < 3; j++) {
                 char val = grid[i][j].getValue();
-                String contString = (val == ' ') ? " " : String.valueOf(val);
-                System.out.print(" " + contString + " | ");
+                String token = (val == ' ') ? " " : Style.playeToken(val);
+                System.out.print(" " + token + " | ");
             }
             System.out.println();
             if (i < 2)
@@ -39,26 +39,19 @@ public class Board {
     }
 
     public boolean checkWinner(char player) {
+        // rows and columns
         for (int i = 0; i < 3; i++) {
-            if (grid[i][0].getValue() == player &&
-                    grid[i][1].getValue() == player &&
-                    grid[i][2].getValue() == player) return true;
-
-            if (grid[0][i].getValue() == player &&
-                grid[1][i].getValue() == player &&
-                grid[2][i].getValue() == player) return true;
-
+            if (lineMatch(player, grid[i][0], grid[i][1], grid[i][2])) return true;
+            if (lineMatch(player, grid[0][i], grid[1][i], grid[2][i])) return true;
         }
+        // diagonals
+        if (lineMatch(player, grid[0][0], grid[1][1], grid[2][2])) return true;
+        if (lineMatch(player, grid[0][2], grid[1][1], grid[2][0])) return true;
+        return false;
+    }
 
-            if (grid[0][0].getValue() == player &&
-                grid[1][1].getValue() == player &&
-                grid[2][2].getValue() == player) return true;
-
-            if (grid[0][2].getValue() == player &&
-                grid[1][1].getValue() == player &&
-                grid[2][0].getValue() == player) return true;
-            
-            return false;
+    private boolean lineMatch(char player, Box a, Box b, Box c) {
+        return a.getValue() == player && b.getValue() == player && c.getValue() == player;
     }
 
     public boolean isFull() {
