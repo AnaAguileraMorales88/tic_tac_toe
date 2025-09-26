@@ -51,16 +51,16 @@ public class App {
 
             if(board.checkWinner(currentPlayer)){
                 System.out.println();
-                System.out.println(Style.colorBlueBold(currentPlayer +  " ha ganado!!\n"));
+                System.out.println(Style.colorBlueBold("Jugador: " + currentPlayer +  " ha ganado!!\n"));
                 break;
             }
 
             if(board.isFull()){
-                System.out.println(Style.colorYellow("\n\nEmpate. No hay más movimientos posibles."));
+                System.out.println(Style.colorYellow("\n\n¡Empate! No hay más movimientos posibles."));
                 break;
             }
 
-            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
+            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';     
 
         }
             sc.close();

@@ -1,1 +1,5 @@
+com/tic_tac_toe/Board.class
+com/tic_tac_toe/Box.class
+com/tic_tac_toe/Style.class
 com/tic_tac_toe/App.class
+com/tic_tac_toe/Coordinate.class

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.tic_tac_toe.AppTest
+Test set: com.tic_tac_toe.BoardTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.tic_tac_toe.AppTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.tic_tac_toe.BoardTest
