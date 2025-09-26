@@ -18,6 +18,11 @@
 - Trello  
 - Git / GitHub
 
+- **Capturas de la terminal**
+<img width="291" height="231" alt="Captura de pantalla 2025-09-26 a las 16 36 44" src="https://github.com/user-attachments/assets/f81c100d-2edd-45f1-9b73-8efd36111c47" />
+
+- <img width="244" height="474" alt="Captura de pantalla 2025-09-26 a las 16 39 08" src="https://github.com/user-attachments/assets/f3f91cd9-a61b-4c93-a270-f16670063984" />
+
 ## ▶ Cómo jugar
 
 
