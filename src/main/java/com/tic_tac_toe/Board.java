@@ -20,7 +20,7 @@ public class Board {
             System.out.print(i + " | ");
             for (int j = 0; j < 3; j++) {
                 char val = grid[i][j].getValue();
-                String token = (val == ' ') ? " " : Style.playeToken(val);
+                String token = (val == ' ') ? " " : Style.playerToken(val);
                 System.out.print(" " + token + " | ");
             }
             System.out.println();

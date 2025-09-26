@@ -49,7 +49,7 @@ public final class Style {
             return WHITEBG + BLUE + BOLD + text + RESET;
         }
 
-        public static String playeToken(char token){
+        public static String playerToken(char token){
             if(token == 'X') return colorRed(String.valueOf(token));
             if(token == 'O') return colorGreen(String.valueOf(token));
             return String.valueOf(token);

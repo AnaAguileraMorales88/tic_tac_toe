@@ -15,7 +15,7 @@ public class App {
         board.printBoard();
 
         while (true) {
-            String playerDisplay = Style.playeToken(currentPlayer);
+            String playerDisplay = Style.playerToken(currentPlayer);
             System.out.println(Style.colorPink("\n\nTurno de jugador: " + Style.colorBold(playerDisplay)));
             System.out.println();
 
