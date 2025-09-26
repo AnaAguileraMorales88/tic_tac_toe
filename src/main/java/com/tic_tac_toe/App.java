@@ -1,3 +1,4 @@
+
 package com.tic_tac_toe;
 
 import java.util.Scanner;
@@ -10,7 +11,7 @@ public class App {
 
         System.out.println("\n\nBienvenid@ a nuestro juego!");
         System.out.println();
-  
+
         board.printBoard();
 
         while (true) {
@@ -32,7 +33,7 @@ public class App {
                 if (!board.makeMove(move, currentPlayer)) {
                     System.out.println("\nEsa casilla ya está ocupada, vuelve a intentarlo");
                     continue; 
-                    
+
                 }
 
                 break; 
@@ -54,6 +55,6 @@ public class App {
 
         }
             sc.close();
-     
+
     }
 }

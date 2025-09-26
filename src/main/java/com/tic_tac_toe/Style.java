@@ -1,0 +1,40 @@
+package com.tic_tac_toe;
+
+public final class Style {
+    private static final String RESET = "\u001B[0m";
+    private static final String BOLD = "\u001B[1m";
+    private static final String RED = "\u001B[31m";
+    private static final String GREEN = "\u001B[32m";
+    private static final String YELLOW = "\u001B[33m";
+    private static final String BLUE = "\u001B[34m";
+  
+    private Style(){}
+        public static String colorRed(String text){
+            return RED + text + RESET;
+        }
+
+        public static String colorGreen(String text){
+            return GREEN + text + RESET;
+        }
+
+        public static String colorBlue(String text){
+            return BLUE + text + RESET;
+        }
+
+        public static String colorYellow(String text){
+            return YELLOW + text + RESET;
+        }
+
+        public static String colorBold(String text){
+            return BOLD + text + RESET;
+        }
+
+        public static String playeToken(char token){
+            if(token == 'X') return colorRed(String.valueOf(token));
+            if(token == 'O') return colorGreen(String.valueOf(token));
+            return String.valueOf(token);
+
+        }
+
+   
+}
