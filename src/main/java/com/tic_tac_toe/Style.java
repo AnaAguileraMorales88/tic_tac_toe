@@ -7,6 +7,8 @@ public final class Style {
     private static final String GREEN = "\u001B[32m";
     private static final String YELLOW = "\u001B[33m";
     private static final String BLUE = "\u001B[34m";
+    private static final String PINK = "\u001B[95m";
+    private static final String ORANGE = "\u001B[93m";
   
     private Style(){}
         public static String colorRed(String text){
@@ -28,6 +30,18 @@ public final class Style {
         public static String colorBold(String text){
             return BOLD + text + RESET;
         }
+
+                public static String colorBlueBold(String text){
+            return BLUE + BOLD + text + RESET;
+        }
+  
+               public static String colorPink(String text){
+            return PINK + text + RESET;
+        }
+                   public static String colorOrange(String text){
+            return ORANGE + text + RESET;
+        }
+
 
         public static String playeToken(char token){
             if(token == 'X') return colorRed(String.valueOf(token));

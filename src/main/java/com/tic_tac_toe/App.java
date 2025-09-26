@@ -9,45 +9,54 @@ public class App {
         Board board = new Board();
         char currentPlayer = 'X';
 
-        System.out.println("\n\nBienvenid@ a nuestro juego!");
+        System.out.println("\n\n" + Style.colorBlueBold("Bienvenid@ a nuestro juego!"));
         System.out.println();
 
         board.printBoard();
 
         while (true) {
-            System.out.println("\n\nTurno de jugad@r: " + currentPlayer);
+            String playerDisplay = Style.playeToken(currentPlayer);
+            System.out.println(Style.colorPink("\n\nTurno de jugador: " + Style.colorBold(playerDisplay)));
             System.out.println();
 
             int row, column; 
+
             while (true) {
-                System.out.print("\nIngresa fila (0 al 2): ");
+
+                try{
+                System.out.print(Style.colorOrange("\nIngresa fila (0 al 2): "));
                 row = sc.nextInt();
-                System.out.print("\nIngresa columna (0 al 2): ");
+                System.out.print(Style.colorOrange("\nIngresa columna (0 al 2): "));
                 column = sc.nextInt();
 
                 if (row < 0 || row > 2 || column < 0 || column > 2) {
-                    System.out.println("\nTienes que ingresar números del 0 al 2, vuelve a intentarlo");
+                    System.out.println("\n" + Style.colorYellow ("Tienes que ingresar números del 0 al 2. Vuelve a intentarlo"));
                     continue;
                 }
                 Coordinate move = new Coordinate(row, column);
                 if (!board.makeMove(move, currentPlayer)) {
-                    System.out.println("\nEsa casilla ya está ocupada, vuelve a intentarlo");
+                    System.out.println(Style.colorYellow("\nEsa casilla ya está ocupada, vuelve a intentarlo"));
                     continue; 
-
                 }
 
                 break; 
+            }
+            catch(java.util.InputMismatchException e ){
+                System.out.println("\n" + Style.colorYellow ("Solo son válidos números de 0 al 2. Vuelve a intentarlo"));
+                sc.nextLine();
+            }
+
             }
             board.printBoard();
 
             if(board.checkWinner(currentPlayer)){
                 System.out.println();
-                System.out.println(currentPlayer + " ha ganado!!");
+                System.out.println(Style.colorBlueBold(currentPlayer +  " ha ganado!!"));
                 break;
             }
 
             if(board.isFull()){
-                System.out.println("\n\nEmpate. No hay más movimientos posibles.");
+                System.out.println(Style.colorYellow("\n\nEmpate. No hay más movimientos posibles."));
                 break;
             }
 
