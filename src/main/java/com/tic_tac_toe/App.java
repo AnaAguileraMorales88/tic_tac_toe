@@ -21,7 +21,6 @@ public class App {
             int row, column;
 
             while (true) {
-
                 try {
                     System.out.print(Style.colorOrange("\nIngresa fila (0 al 2): "));
                     row = sc.nextInt();
@@ -29,8 +28,7 @@ public class App {
                     column = sc.nextInt();
 
                     if (row < 0 || row > 2 || column < 0 || column > 2) {
-                        System.out.println("\n"
-                                + Style.colorYellow("Tienes que ingresar números del 0 al 2. Vuelve a intentarlo"));
+                        System.out.println("\n" + Style.colorYellow("Tienes que ingresar números del 0 al 2. Vuelve a intentarlo"));
                         continue;
                     }
                     Coordinate move = new Coordinate(row, column);
@@ -38,15 +36,13 @@ public class App {
                         System.out.println(Style.colorYellow("\nEsa casilla ya está ocupada, vuelve a intentarlo"));
                         continue;
                     }
-
                     break;
                 } catch (java.util.InputMismatchException e) {
-                    System.out.println(
-                            "\n" + Style.colorYellow("Solo son válidos números de 0 al 2. Vuelve a intentarlo"));
+                    System.out.println("\n" + Style.colorYellow("Solo son válidos números de 0 al 2. Vuelve a intentarlo"));
                     sc.nextLine();
                 }
-
             }
+
             board.printBoard();
 
             if (board.checkWinner(currentPlayer)) {
@@ -65,9 +61,8 @@ public class App {
             }
 
             currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-
         }
-        sc.close();
 
+        sc.close();
     }
 }
