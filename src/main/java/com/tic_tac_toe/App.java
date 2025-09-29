@@ -23,23 +23,27 @@ public class App {
             while (true) {
                 try {
                     System.out.print(Style.colorOrange("\nIngresa fila (0 al 2): "));
-                    row = sc.nextInt();
+                    String rowInput = sc.nextLine().trim();
                     System.out.print(Style.colorOrange("\nIngresa columna (0 al 2): "));
-                    column = sc.nextInt();
+                    String colInput = sc.nextLine().trim();
 
-                    if (row < 0 || row > 2 || column < 0 || column > 2) {
-                        System.out.println("\n" + Style.colorYellow("Tienes que ingresar números del 0 al 2. Vuelve a intentarlo"));
+                    if (!rowInput.matches("[0-2]") || !colInput.matches("[0-2]")) {
+                        System.out.println("\n" + Style.colorYellow("Por favor introduce solo un número entre 0 y 2."));
                         continue;
                     }
+
+                    row = Integer.parseInt(rowInput);
+                    column = Integer.parseInt(colInput);
+
                     Coordinate move = new Coordinate(row, column);
                     if (!board.makeMove(move, currentPlayer)) {
                         System.out.println(Style.colorYellow("\nEsa casilla ya está ocupada, vuelve a intentarlo"));
                         continue;
                     }
                     break;
-                } catch (java.util.InputMismatchException e) {
-                    System.out.println("\n" + Style.colorYellow("Solo son válidos números de 0 al 2. Vuelve a intentarlo"));
-                    sc.nextLine();
+
+                } catch (Exception e) {
+                    System.out.println("\n" + Style.colorYellow("Entrada inválida. Solo números del 0 al 2."));
                 }
             }
 
