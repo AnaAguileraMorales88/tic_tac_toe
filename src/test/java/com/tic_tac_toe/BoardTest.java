@@ -11,7 +11,7 @@ class BoardTest {
         Board board = new Board();
         boolean result = board.makeMove(new Coordinate(0, 0), 'X');
         assertTrue(result);
-        assertTrue(board.checkWinner('X') == false); // just ensure no false positive yet
+        assertTrue(board.checkWinner('X') == false); 
     }
 
     @Test
