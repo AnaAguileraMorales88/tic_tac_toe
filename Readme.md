@@ -47,11 +47,6 @@ Cuando haya un ganador o empate, se mostrará el mensaje correspondiente.
 
 **Las filas y columnas se numeran así:**
 
-    0   1   2
- 0  _ | _ | _
- 1  _ | _ | _
- 2  _ | _ | 
- 
 La primera cifra indica la fila.
 
 La segunda cifra indica la columna.
