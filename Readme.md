@@ -74,7 +74,9 @@ Por ejemplo, ingresar fila=0, columna=1 coloca tu ficha en la parte superior cen
 ## 🤝 EQUIPO
 
 **Paola Pulga** - [https://github.com/Pao-Pul]
+
 **Estefanía Secanell** - [https://github.com/Abaraira]
+
 **Ana Aguilera** – [https://www.linkedin.com/in/ana-aguilera-morales-011b1a238/]
 
 
