@@ -11,11 +11,30 @@
 ## 💻 Tecnologías
 
 - Java 21
+- Scanner para entrada de datos
+- Apache Maven: 3.13.0
+- JUnit 5: 5.11.0
 
-## 🛠 Herramientas
+  ## 🛠️ Instalación y Ejecución
+
+ ###  Clonar el repositorio
+
+git clone https://github.com/AnaAguileraMorales88/tic_tac_toe.git
+
+cd tic-tac-toe-java
+
+ ### Compilar el Código
+
+ javac TicTacToe.java
+
+ ###  Ejecutar el Juego
+
+ java TicTacToe
+
+
+## 🔧 Herramientas
 
 - Visual Studio Code  
-- Trello  
 - Git / GitHub
 
 - **Capturas de la terminal**
@@ -24,7 +43,6 @@
 - <img width="244" height="474" alt="Captura de pantalla 2025-09-26 a las 16 39 08" src="https://github.com/user-attachments/assets/f3f91cd9-a61b-4c93-a270-f16670063984" />
 
 ## ▶ Cómo jugar
-
 
    Abre la terminal en la carpeta del proyecto y ejecuta:  
    javac App.java
@@ -52,4 +70,12 @@ La primera cifra indica la fila.
 La segunda cifra indica la columna.
 
 Por ejemplo, ingresar fila=0, columna=1 coloca tu ficha en la parte superior central.
+
+## 🤝 EQUIPO
+
+**Paola Pulga** - [https://github.com/Pao-Pul]
+**Estefanía Secanell** - [https://github.com/Abaraira]
+**Ana Aguilera** – [https://www.linkedin.com/in/ana-aguilera-morales-011b1a238/]
+
+
 
